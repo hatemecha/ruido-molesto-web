@@ -669,11 +669,10 @@ main.main.no-slider .slider {
   position: absolute;
   inset: 0;
   background: linear-gradient(90deg,
-      var(--c-bg) 0%,
-      rgba(10, 10, 10, 0.95) 8%,
-      rgba(10, 10, 10, 0.7) 20%,
-      rgba(10, 10, 10, 0.3) 40%,
-      transparent 60%,
+      #000000 0%,
+      rgba(0, 0, 0, 0.9) 10%,
+      rgba(0, 0, 0, 0.4) 30%,
+      transparent 50%,
       transparent 100%);
   pointer-events: none;
   z-index: 1;

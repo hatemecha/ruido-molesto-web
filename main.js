@@ -217,13 +217,19 @@ const openModal = (index) => {
   `
 
   modal.classList.add('is-active')
+  modal.setAttribute('aria-hidden', 'false')
   document.body.style.overflow = 'hidden'
+
+  // Foco inicial en el botón de cerrar para accesibilidad
+  const closeBtn = modal.querySelector('.modal__close')
+  if (closeBtn) closeBtn.focus()
 }
 
 const closeModal = () => {
   const modal = document.getElementById('band-modal')
   if (modal) {
     modal.classList.remove('is-active')
+    modal.setAttribute('aria-hidden', 'true')
     document.body.style.overflow = ''
   }
 }

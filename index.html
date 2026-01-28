@@ -12,6 +12,11 @@
     crossorigin="anonymous" referrerpolicy="no-referrer">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/png" href="assets/images/logopng_trojo.png">
+
+  <!-- Preload critical assets -->
+  <link rel="preload" href="assets/images/logopng_trojo.png" as="image">
+  <link rel="preload" href="assets/images/007.JPG" as="image">
+  <link rel="preload" href="assets/images/textura.jpg" as="image">
 </head>
 
 <body>
@@ -60,7 +65,7 @@
         <!-- Secciones -->
         <section id="section-home" role="tabpanel" aria-labelledby="tab-home" class="section is-active">
           <div class="section__inner">
-            <img src="assets/images/logopng_trojo.png" alt="Ruido Molesto Logo" class="home-logo">
+            <img src="assets/images/logopng_trojo.png" alt="Ruido Molesto Logo" class="home-logo" fetchpriority="high">
             <p class="intro">
               Ruido Molesto es un sello discográfico independiente nacido en Bahía Blanca, Buenos Aires.<br>
               Creado para amplificar la voz de las bandas emergentes y los proyectos del under que no encajan en los
@@ -116,9 +121,9 @@
       <!-- Slider -->
       <div class="slider" aria-hidden="true">
         <div class="slider__track">
-          <img src="assets/images/007.JPG" alt="" class="slider__img is-active">
-          <img src="assets/images/061.JPG" alt="" class="slider__img">
-          <img src="assets/images/092.JPG" alt="" class="slider__img">
+          <img src="assets/images/007.JPG" alt="" class="slider__img is-active" fetchpriority="high">
+          <img src="assets/images/061.JPG" alt="" class="slider__img" loading="lazy">
+          <img src="assets/images/092.JPG" alt="" class="slider__img" loading="lazy">
         </div>
         <div class="slider__overlay"></div>
       </div>

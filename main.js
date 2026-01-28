@@ -130,7 +130,7 @@ const renderReleases = () => {
 
     article.innerHTML = `
       <div class="release__cover">
-        ${release.cover ? `<img src="${release.cover}" alt="${release.titulo}">` : ''}
+        ${release.cover ? `<img src="${release.cover}" alt="${release.titulo}" loading="lazy">` : ''}
       </div>
       <div class="release__info">
         <span class="release__title">${release.titulo}</span>
@@ -166,7 +166,7 @@ const renderBands = () => {
 
     article.innerHTML = `
       <div class="band-card__image">
-        <img src="${band.imagen}" alt="${band.nombre}">
+        <img src="${band.imagen}" alt="${band.nombre}" loading="lazy">
       </div>
       <div class="band-card__content">
         <h3 class="band-card__name">${band.nombre}</h3>
@@ -198,7 +198,7 @@ const openModal = (index) => {
   content.innerHTML = `
     <div class="modal__container">
       <div class="modal__image">
-        <img src="${band.imagen}" alt="${band.nombre}">
+        <img src="${band.imagen}" alt="${band.nombre}" loading="lazy">
       </div>
       <div class="modal__info">
         <h2 class="modal__title">${band.nombre}</h2>

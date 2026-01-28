@@ -114,6 +114,24 @@ body::after {
   mix-blend-mode: overlay;
 }
 
+/* Texture overlay for scratches and dirty look */
+.app::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url('assets/images/textura.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.3;
+  /* Subjetivo, ajustable */
+  mix-blend-mode: soft-light;
+  /* Soft light suele ser más natural para texturas */
+  pointer-events: none;
+  z-index: 9999;
+  filter: contrast(1.2) brightness(0.8);
+}
+
 a {
   color: inherit;
   text-decoration: none;

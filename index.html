@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ruido Molesto — Sello Discográfico Independiente</title>
+  <meta name="description"
+    content="Sello discográfico independiente de Bahía Blanca. Autogestión, identidad y libertad creativa.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔊</text></svg>">
+</head>
+
+<body>
+  <div class="app">
+    <!-- Header -->
+    <header class="header">
+      <div class="header__bar"></div>
+      <div class="header__content">
+        <a href="#home" class="header__logo" aria-label="Ruido Molesto - Inicio">
+          <span class="logo-text">RUIDO<br>MOLESTO</span>
+        </a>
+
+        <nav class="nav" aria-label="Navegación principal">
+          <ul class="nav__list" role="tablist">
+            <li><a href="#home" role="tab" aria-selected="true" aria-controls="section-home"
+                class="nav__link is-active">HOME</a></li>
+            <li><a href="#discografia" role="tab" aria-selected="false" aria-controls="section-discografia"
+                class="nav__link">DISCOGRAFÍA</a></li>
+            <li><a href="#bandas" role="tab" aria-selected="false" aria-controls="section-bandas"
+                class="nav__link">BANDAS</a></li>
+            <li><a href="#contacto" role="tab" aria-selected="false" aria-controls="section-contacto"
+                class="nav__link">CONTACTO</a></li>
+          </ul>
+        </nav>
+
+        <div class="social">
+          <a href="https://www.instagram.com/ruidomolesto.sello/" target="_blank" rel="noopener" class="social__link"
+            aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://open.spotify.com/playlist/2L1qbABNSAd5iqV4iFoeFP?si=b577bf8c1b2d4164" target="_blank"
+            rel="noopener" class="social__link" aria-label="Spotify">
+            <i class="fa-brands fa-spotify"></i>
+          </a>
+          <a href="https://www.youtube.com/@ruidomolestosello" target="_blank" rel="noopener" class="social__link"
+            aria-label="YouTube">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main -->
+    <main class="main">
+      <div class="main__content">
+        <!-- Secciones -->
+        <section id="section-home" role="tabpanel" aria-labelledby="tab-home" class="section is-active">
+          <div class="section__inner">
+            <img src="assets/images/logopng_trojo.png" alt="Ruido Molesto Logo" class="home-logo">
+            <p class="intro">
+              Ruido Molesto es un sello discográfico independiente nacido en Bahía Blanca, Buenos Aires.<br>
+              Creado para amplificar la voz de las bandas emergentes y los proyectos del under que no encajan en los
+              moldes de la industria tradicional.
+            </p>
+            <p class="intro intro--secondary">
+              Autogestión, identidad y libertad creativa.<br>
+              Acompañamos a cada proyecto desde la producción hasta la distribución, sin imponer fórmulas ni estéticas
+              prefabricadas.
+            </p>
+            <div class="intro__actions">
+              <a href="#contacto" class="btn-primary nav__link-action">TRABAJEMOS JUNTOS</a>
+            </div>
+          </div>
+        </section>
+
+        <section id="section-discografia" role="tabpanel" aria-labelledby="tab-discografia" class="section"
+          data-title="DISCOGRAFÍA" hidden>
+          <div class="section__inner">
+            <h2 class="section__title">Discografía</h2>
+            <div class="releases" id="releases-grid"></div>
+          </div>
+        </section>
+
+        <section id="section-bandas" role="tabpanel" aria-labelledby="tab-bandas" class="section" data-title="BANDAS"
+          hidden>
+          <div class="section__inner">
+            <h2 class="section__title">Bandas</h2>
+            <ul class="bands" id="bands-list"></ul>
+          </div>
+        </section>
+
+        <section id="section-contacto" role="tabpanel" aria-labelledby="tab-contacto" class="section"
+          data-title="CONTACTO" hidden>
+          <div class="section__inner">
+            <h2 class="section__title">Contacto</h2>
+            <p class="contact-text">
+              ¿Tenés un proyecto y querés sumarte al sello?<br>
+              Escribinos y contanos de qué va tu música.
+            </p>
+            <a href="mailto:ruidomolesto25@gmail.com" class="contact-link">
+              <i class="fa-solid fa-envelope"></i> ruidomolesto25@gmail.com
+            </a>
+            <div class="contact-social">
+              <a href="https://www.instagram.com/ruidomolesto.sello/" target="_blank" rel="noopener">
+                <i class="fa-brands fa-instagram"></i> @ruidomolesto.sello
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Slider -->
+      <div class="slider" aria-hidden="true">
+        <div class="slider__track">
+          <img src="assets/images/007.JPG" alt="" class="slider__img is-active">
+          <img src="assets/images/061.JPG" alt="" class="slider__img">
+          <img src="assets/images/092.JPG" alt="" class="slider__img">
+        </div>
+        <div class="slider__overlay"></div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>Ruido Molesto © 2026</p>
+    </footer>
+  </div>
+
+  <!-- Modal Biografía -->
+  <div id="band-modal" class="modal" aria-hidden="true" role="dialog">
+    <div class="modal__content">
+      <button class="modal__close" aria-label="Cerrar modal">&times;</button>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+
+</html>

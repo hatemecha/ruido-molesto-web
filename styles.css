@@ -7,7 +7,7 @@
   src: url('assets/fonts/Druk-Wide-Bold.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
-  font-display: swap;
+  font-display: block;
 }
 
 :root {
@@ -77,6 +77,7 @@
 html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 body {
@@ -87,6 +88,18 @@ body {
   background: var(--c-bg);
   overflow: hidden;
   height: 100svh;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 /* Gradient background with grain */
@@ -206,6 +219,8 @@ button {
   font-style: italic;
   letter-spacing: -0.02em;
   display: block;
+  text-rendering: geometricPrecision;
+  font-synthesis: none;
 }
 
 /* Nav */
@@ -359,6 +374,8 @@ main.main.no-slider .section__inner {
   display: flex;
   align-items: center;
   gap: var(--space-sm);
+  text-rendering: geometricPrecision;
+  font-synthesis: none;
 }
 
 .section__title::after {
@@ -410,6 +427,7 @@ main.main.no-slider .section__inner {
   transition: all var(--transition-base);
   letter-spacing: 0.05em;
   font-style: italic;
+  font-synthesis: none;
 }
 
 .btn-primary:hover {
@@ -557,6 +575,7 @@ main.main.no-slider .section__inner {
   color: var(--c-text);
   font-style: italic;
   text-transform: uppercase;
+  font-synthesis: none;
 }
 
 .band__tags {
@@ -939,6 +958,7 @@ main.main.no-slider .slider {
   text-transform: uppercase;
   line-height: 1.1;
   word-wrap: break-word;
+  font-synthesis: none;
 }
 
 .modal__bio {

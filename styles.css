@@ -120,7 +120,7 @@ body::after {
   content: '';
   position: fixed;
   inset: 0;
-  background-image: url('assets/images/textura.jpg');
+  background-image: url('assets/images/textura.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

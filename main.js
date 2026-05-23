@@ -15,7 +15,7 @@ const RELEASES = [
 const BANDS = [
   {
     nombre: 'Paprika Spicy',
-    imagen: 'assets/images/paprika.JPG',
+    imagen: 'assets/images/paprika.webp',
     tags: ['alternativo', 'grunge', 'punk', 'shoegaze'],
     bio: 'Banda creada por amigos a mediados de septiembre de 2023, y formalizando con el primer concierto en diciembre de ese año. Paprika busca traer un sonido distinto, sin estructura y variado; haciendo desde el Punk-Rock más simple hasta Shoegaze. El 29 de diciembre de 2025 sacaron "Pa Wacha Ka", su primer sencillo y adelanto del próximo álbum. Paprika, de Bahía para todo el mundo.',
     redes: {

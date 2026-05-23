@@ -53,15 +53,8 @@ const initNavigation = () => {
       link.setAttribute('aria-selected', isActive)
     })
 
-    // Mostrar slider solo en home
     if (slider && main) {
-      if (isHome) {
-        slider.style.display = ''
-        main.style.gridTemplateColumns = ''
-      } else {
-        slider.style.display = 'none'
-        main.style.gridTemplateColumns = '1fr'
-      }
+      main.classList.toggle('no-slider', !isHome)
     }
   }
 

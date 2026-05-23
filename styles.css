@@ -20,10 +20,10 @@
   --ff-display: 'Druk Wide', 'Impact', sans-serif;
   --ff-body: 'Archivo', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
-  --fs-logo: clamp(2rem, 5.2vw, 4.5rem);
-  --fs-nav: clamp(0.7rem, 1vw, 0.86rem);
+  --fs-logo: clamp(1.85rem, 3vw, 2.8rem);
+  --fs-nav: clamp(0.68rem, 0.8vw, 0.8rem);
   --fs-title: clamp(1.55rem, 3.4vw, 2.35rem);
-  --fs-body: clamp(0.95rem, 1.3vw, 1.08rem);
+  --fs-body: clamp(0.9rem, 0.95vw, 1rem);
   --fs-small: clamp(0.78rem, 0.95vw, 0.88rem);
 
   --space-2xs: clamp(0.25rem, 0.5vw, 0.375rem);
@@ -75,7 +75,7 @@ body {
   background: var(--c-bg);
   min-height: 100svh;
   overflow-x: clip;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .sr-only {
@@ -181,7 +181,7 @@ button {
 }
 
 .header__bar {
-  height: 6px;
+  height: 4px;
   background: var(--c-accent);
 }
 
@@ -189,7 +189,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: clamp(1rem, 2.2vw, 1.75rem) var(--page-gutter);
+  padding: clamp(0.8rem, 1.45vw, 1.15rem) var(--page-gutter);
   gap: var(--space-md);
 }
 
@@ -201,7 +201,7 @@ button {
   font-family: var(--ff-display);
   font-size: var(--fs-logo);
   font-weight: 700;
-  line-height: 0.95;
+  line-height: 0.9;
   color: var(--c-accent);
   font-style: italic;
   letter-spacing: 0;
@@ -272,7 +272,7 @@ button {
 
 .social__link {
   color: var(--c-text);
-  font-size: clamp(1.2rem, 2vw, 1.55rem);
+  font-size: clamp(1.12rem, 1.45vw, 1.35rem);
   transition: color var(--transition-base), transform var(--transition-base);
 }
 
@@ -296,7 +296,7 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: var(--space-lg) var(--page-gutter);
+  padding: clamp(1.25rem, 2.2vw, 2rem) var(--page-gutter);
   position: relative;
   min-width: 0;
 }
@@ -383,7 +383,7 @@ main.main.no-slider .section__inner {
 }
 
 .home-logo {
-  width: clamp(64px, 9vw, 88px);
+  width: clamp(54px, 5vw, 72px);
   max-width: 100%;
   height: auto;
   margin: 0 auto var(--space-md) auto;
@@ -394,9 +394,9 @@ main.main.no-slider .section__inner {
 /* Home */
 .intro {
   font-size: var(--fs-body);
-  line-height: 1.65;
+  line-height: 1.58;
   color: var(--c-text);
-  max-width: 58ch;
+  max-width: 56ch;
   margin-inline: auto;
   font-weight: 500;
   text-wrap: pretty;
@@ -404,7 +404,7 @@ main.main.no-slider .section__inner {
 
 .intro--secondary {
   color: rgba(245, 245, 245, 0.68);
-  margin-bottom: var(--space-lg);
+  margin-bottom: clamp(1.25rem, 2.6vw, 2rem);
   margin-top: var(--space-sm);
   font-weight: 400;
 }
@@ -425,7 +425,7 @@ main.main.no-slider .section__inner {
   font-weight: 700;
   color: #000;
   background: var(--c-accent);
-  padding: 0.9rem clamp(1.25rem, 3vw, 2rem);
+  padding: 0.78rem clamp(1.1rem, 2.4vw, 1.65rem);
   border-radius: 4px;
   transition: all var(--transition-base);
   letter-spacing: 0;
@@ -671,7 +671,7 @@ main.main.no-slider .section__inner {
   position: relative;
   overflow: hidden;
   transition: opacity var(--transition-slow);
-  padding: var(--space-lg) var(--page-gutter) var(--space-xl) var(--space-md);
+  padding: clamp(1.25rem, 2.2vw, 2rem) var(--page-gutter) clamp(1.5rem, 2.8vw, 2.4rem) var(--space-md);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -738,16 +738,42 @@ main.main.no-slider .slider {
    ========================================================================== */
 
 .footer {
-  padding: 0.85rem var(--page-gutter);
+  padding: 0.62rem var(--page-gutter);
   text-align: center;
   font-family: var(--ff-body);
   font-size: clamp(0.72rem, 0.9vw, 0.82rem);
   font-weight: 800;
+  line-height: 1.15;
   text-transform: none;
   letter-spacing: 0;
   color: #000000;
   background: var(--c-accent);
   border-top: none;
+}
+
+@media (min-width: 1025px) {
+  body {
+    height: 100svh;
+    overflow: hidden;
+  }
+
+  .app {
+    height: 100svh;
+    overflow: hidden;
+  }
+
+  .main {
+    overflow: hidden;
+  }
+
+  .main__content {
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+
+  .slider {
+    min-height: 0;
+  }
 }
 
 /* ==========================================================================
